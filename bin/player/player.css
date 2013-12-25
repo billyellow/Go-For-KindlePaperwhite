@@ -1,0 +1,818 @@
+.kingo-player-auto {
+    text-indent: -9999px;
+    font-size: 0;
+}
+.kingo-player {
+    width: 600px;
+	position: relative;
+    background: #222;
+    padding: 0px 0 0 0;
+}
+.kingo-player ul, .kingo-player ol, .kingo-player dl, .kingo-player dd, .kingo-player dt {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.kingo-player input, .kingo-player select {
+    background: #fff;
+    color: #000;
+}
+.kingo-player .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9998;
+    opacity: 0.55;
+    filter: alpha(opacity=55);
+    display: none;
+}
+.kingo-player .controls-container {
+	width: 600px;
+	height: 66px;
+	position: relative;
+	padding: 0;
+    background: #d9d9d9;
+    color: #fff;
+}
+.kingo-player .controls {
+	height: 50px;
+	text-indent: -9999px;
+	font-size: 0;
+	padding-left: 2px;
+}
+.kingo-player .controls .control {
+	margin: 1px 8px 1px 8px;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+	width: 88px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: 22px 9px;
+	background-color: #8aa;
+	float: left;
+	background-image: url(./images/buttons.gif);
+}
+.kingo-player .controls .back {
+    background-position: 22px -27px;
+}
+.kingo-player .controls .back-on {
+    background-position: 22px -76px;
+	cursor: pointer;
+}
+.kingo-player .controls .forward {
+    background-position: 22px -223px;
+}
+.kingo-player .controls .forward-on {
+    background-position: 22px -272px;
+	cursor: pointer;
+}
+.kingo-player .controls .first {
+    background-position: 22px -125px;
+}
+.kingo-player .controls .first-on {
+    background-position: 22px -174px;
+	cursor: pointer;
+}
+.kingo-player .controls .last {
+    background-position: 22px -321px;
+}
+.kingo-player .controls .last-on {
+    background-position: 22px -370px;
+	cursor: pointer;
+}
+.kingo-player .controls .pass {
+	float: right;
+	background-position: 22px -419px;
+	margin-right: 11px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.kingo-player .controls .pass-on {
+	background-position: 22px -468px;
+	cursor: pointer;
+}
+.kingo-player .move-number {
+	position: absolute;
+	top: 6px;
+	left: 430px;
+	color: #000;
+	font-size: 13px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.kingo-player .permalink {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.kingo-player .nav-slider {
+	clear: both;
+	position: absolute;
+	top: 32px;
+	left: 0px;
+	height: 10px;
+	width: 598px;
+	margin: 0px 1px 0px 1px;
+	border-top: 0px solid #122;
+	background: #8aa;
+}
+.kingo-player .nav-slider-thumb {
+    position: absolute;
+	width: 9px;
+	height: 9px;
+	background: #fff;
+	border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+	cursor: pointer;
+}
+.kingo-player .variations-container {
+	width: 590px;
+    min-height: 10px;
+	padding: 10px 5px 0px 5px;
+}
+.kingo-player .variations-label {
+	float: left;
+	position: relative;
+	top: -16px;
+	padding: 3px 0px 0 0;
+	cursor: default;
+	font-size: 12px;
+	color: #000;
+}
+.kingo-player .variation-nav {
+	float: left;
+    background: #799;
+    color: #b00;
+	font-weight: bold;
+	margin: 1px;
+	position: relative;
+	top: -13px;
+	padding: 0px 5px 6px 5px;
+	font-size: 12px;
+	width: auto;
+	height: 10px;
+	cursor: pointer;
+	color: #fff;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.kingo-player .variation-nav.none {
+	font-weight: normal;
+	width: auto;
+    padding-right: 5px;
+	padding-bottom: 6px;
+	color: #fff;
+	background: #688;
+	cursor: default;
+}
+.kingo-player .controls-stop {
+    clear: both;
+}
+.kingo-player .tools-container {
+    clear: both;
+    background: #744;
+    width: 590px;
+    padding: 0px 5px 0px 5px;
+    margin: 5px 0 0 0;
+}
+.kingo-player .tools-label {
+    float: left;
+    padding: 5px 5px 0 0;
+    color: #fff;
+    font-size: 13px;
+    cursor: default;
+}
+.kingo-player .search-button, .kingo-player .score-est-button {
+    margin: 0 0 0 5px;
+    color: #800;
+    font-size: 11px;
+    background: #b88;
+    border: 1px solid #b88;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+}
+.kingo-player .search-region {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 133px;
+    height: 133px;
+    background-color: #80f;
+    opacity: 0.30;
+    filter: alpha(opacity=30);
+    z-index: 9999;
+    display: none;
+}
+.kingo-player .tools-select, .kingo-player .search-algo, .kingo-player .label-input {
+    font-size: 13px;
+}
+.kingo-player .search-algo {
+    margin: 0 0 0 10px;
+    display: none;
+}
+.kingo-player .label-input {
+    border: 1px solid #555;
+    margin: 0 0 0 4px;
+    display: none;
+}
+.kingo-player .comment-pass, .kingo-player .comment-resign {
+	color: #800;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+.kingo-player .comment-status {
+	color: #000;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+.kingo-player .comments {
+	width: 588px;
+	height: auto;
+	font-size: 13px;
+	margin: 1px 0 0 0;
+	padding: 0px 5px 0px 5px;
+	overflow: auto;
+    background: #bba;
+    border-left: 1px solid #998;
+    border-right: 1px solid #998;
+}
+.kingo-player .comments-edit {
+    display: none;
+    z-index: 9999;
+}
+.kingo-player .comments-edit-ta {
+    clear: right;
+    float: right;
+    width: 312px;
+    height: 213px;
+    font-size: 11px;
+    font-family: arial, helvetica, sans-serif;
+    padding: 15px 0px 40px 10px;
+    margin: 0 5px 0 0;
+    background: #eee;
+    border-left: 3px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-right: none;
+    border-bottom: 1px solid #999;
+}
+.kingo-player .comments-edit-done, .kingo-player .game-info-edit-done {
+    display: none;
+    clear: right;
+    float: right;
+    width: 311px;
+    height: 16px;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    text-align: center;
+    background: #ccc url(./images/done_bg.png) repeat-x;
+    color: #222;
+    border: 2px solid #999;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+.kingo-player .comments a {
+    color: #008;
+}
+.kingo-player .comment-info {
+    padding: 2px;
+    background: #bbf;
+    border: 1px solid #88b;
+    margin: 0 0 2px 0;
+}
+.kingo-player .comment-info dl {
+    padding-top: 5px;
+    font-weight: normal;
+}
+.kingo-player .comment-info dt {
+    float: left;
+    clear: left;
+    width: 70px;
+    padding: 0 0 3px 0;
+}
+.kingo-player .comment-info dd {
+    margin: 0 0 0 75px;
+    padding: 0 0 3px 0;
+}
+.kingo-player .game-info-edit {
+    display: none;
+    z-index: 9999;
+    width: 375px;
+    height: 300px;
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+}
+.kingo-player .game-info-edit-form {
+    height: 240px;
+    overflow: auto;
+    padding: 15px 0px 15px 10px;
+}
+.kingo-player .game-info-edit-form input {
+    font-family: arial, helvetica, verdana, sans-serif;
+    font-size: 11px;
+    border: 1px solid #888;
+    width: 240px;
+}
+.kingo-player .game-info-edit-done {
+    margin: 0;
+}
+.kingo-player .search-container {
+	width: 398px;
+	height: 243px;
+	font-size: 12px;
+	margin: 5px 0 0 0;
+	padding: 15px 10px 40px 10px;
+	overflow: auto;
+    background: #bbe;
+    border-left: 3px solid #778;
+    border-top: 2px solid #778;
+    display: none;
+}
+.kingo-player .search-container .search-count {
+    font-size: 11px;
+    padding: 0 0 5px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #778;
+}
+.kingo-player .search-container .search-close {
+    float: right;
+    padding: 4px 7px;
+    background: #aad;
+    color: #008;
+    cursor: pointer;
+    margin-top: -10px;
+    font-weight: bold;
+}
+.kingo-player .search-container .search-count span {
+    font-weight: bold;
+}
+.kingo-player .search-container .search-result {
+    display: block;
+    text-decoration: none;
+    color: #008;
+    cursor: pointer;
+}
+.kingo-player .search-container div.search-result {
+    cursor: default;
+    color: #000;
+}
+.kingo-player .search-container a.search-result.odd {
+    background: #aad;
+}
+.kingo-player .search-container a.search-result:hover {
+    color: #fff;
+    background-color: #77c;
+}
+.kingo-player .search-container .search-result span {
+    display: inline;
+    float: left;
+    padding: 15px 5px;
+}
+.kingo-player .search-container .search-result .id, .kingo-player .search-container .search-result .mv {
+    display: none;
+}
+.kingo-player .search-container .search-result .pw {
+    width: 105px;
+}
+.kingo-player .search-container .search-result .pb {
+    width: 105px;
+}
+.kingo-player .search-container .search-result .re {
+    width: 50px;
+}
+.kingo-player .search-container .search-result .dt {
+    width: 70px;
+}
+.kingo-player .search-container .search-result .clear {
+    clear: both;
+    font-size: 1px;
+}
+.kingo-player .search-container .search-more {
+}
+.kingo-player .search-container .search-more a {
+    clear: left;
+    display: block;
+    text-decoration: none;
+    color: #008;
+    background: #aad;
+    border: 1px solid #88c;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+.kingo-player .board-container {
+	width: 600px;
+	height: 600px;
+	background: #fff;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.kingo-player .board-container.shrunk, .kingo-player .board-container.shrunk .board-gutter {
+    width: auto;
+    height: auto;
+    padding: 0px !important;
+    margin: 0px !important;
+    background: none;
+}
+.kingo-player .board-gutter {
+    width: 600px;
+	height: 600px;
+	padding: 0px;
+	background: #654;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.kingo-player .board-gutter.with-coords {
+    background: #654 url(./images/board-bg-coords.png) no-repeat 5px 5px;
+}
+.kingo-player .board.size7 {
+    position: absolute;
+    width: 143px;
+    height: 143px;
+    background: #888 url(./images/board-7.gif);
+    margin: 114px 114px;
+}
+.kingo-player .board.size9 {
+	position: absolute;
+	width: 181px;
+	height: 181px;
+	background: #888 url(./images/board-9.gif);
+	margin: 90px 90px;
+}
+.kingo-player .board.size13 {
+	position: absolute;
+	width: 257px;
+	height: 257px;
+	background: #888 url(./images/board-13.gif);
+	margin: 57px 57px;
+}
+.kingo-player .board.size19 {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background: #E8C473 url(./images/board-19.png);
+}
+.kingo-player .board .point {
+	position: absolute;
+	width: 31px;
+	height: 31px;
+	z-index: 1;
+}
+.kingo-player .board .point.stone.black {
+	background: url(./images/b.png);
+}
+.kingo-player .board .point.stone.white {
+	background: url(./images/w.png);
+}
+.kingo-player .board .point.marker {
+	z-index: 2;
+	width: 31px;
+	height: 31px;
+	background: url(./images/markers.png) no-repeat top left;
+}
+.kingo-player .board .point.marker.label {
+	color: #f00;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 0 0 5px;
+	width: 14px;
+	height: 16px;
+	cursor: default;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	background: none;
+}
+.kingo-player .board .point.marker.variation {
+	color: #831;
+	//background: #ee974c;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 1px;
+	padding: 2px 5px 1px 5px;
+	width: auto;
+	height: 14px;
+	cursor: pointer;
+	user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	z-index: 3;
+}
+.kingo-player .board .point.marker.current {
+	background-position: 0 -130px;
+}
+.kingo-player .board .point.marker.triangle {
+	background-position: 0 -530px;
+}
+.kingo-player .board .point.marker.square {
+	background-position: 0 -289px;
+}
+.kingo-player .board .point.marker.circle {
+	background-position: 0 -49px;
+}
+.kingo-player .board .point.marker.ex {
+	background-position: 0 -208px;
+}
+.kingo-player .board .point.marker.territory-white {
+    background-position: 0 -455px;
+}
+.kingo-player .board .point.marker.territory-black {
+    background-position: 0 -369px;
+}
+.kingo-player .board .point.marker.dim {
+	background-image: url(./images/dim.png);
+}
+.kingo-player .board-hover-move {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    z-index: 1;
+    margin: -8px 0 0 -8px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    display: none;
+}
+.kingo-player .board-hover-move-b {
+    background-image: url(./images/b-nav.png);
+}
+.kingo-player .board-hover-move-w {
+    background-image: url(./images/w-nav.png);
+}
+.kingo-player .info {
+	width: 600px;
+	margin: 5px 0 0 0;
+	padding: 5px 0 0 0;
+	background: #333;
+    color: #fff;
+	font-size: 10px;
+}
+.kingo-player .info .players {
+	width: 600px;
+	margin: 0px 5px;
+	height: 50px;
+	display: none;
+}
+.kingo-player .info .players .player {
+	width: 295px;
+	float: left;
+	padding-top: 1px;
+	padding-right: 1px;
+}
+.kingo-player .info .players .player.white .name {
+    font-size: 13px;
+	border-top: 1px solid #999;
+    height: 14px;
+	padding: 4px 3px 3px 30px;
+	background: #555 url(./images/markers.png) no-repeat top left;
+    background-position: 0 -455px;
+}
+.kingo-player .info .players .player.black .name {
+    font-size: 13px;
+	border-top: 1px solid #999;
+    height: 14px;
+	padding: 4px 3px 3px 30px;
+	background: #555 url(./images/markers.png) no-repeat top left;
+    background-position: 0 -374px;
+}
+.kingo-player .info .players .player .captures {
+    float: left;
+    width: 40%;
+	padding: 3px 3px 5px 5px;
+	color: #fff;
+	background: #222;
+	font-size: 9px;
+	margin: 0 0 10px 0;
+}
+.kingo-player .info .players .player .captures span {
+	color: #fff;
+	padding-left: 2px;
+}
+.kingo-player .info .players .player .time {
+	padding: 3px 3px 5px 5px;
+	color: #fff;
+	background: #222;
+	font-size: 9px;
+	margin: 0 0 10px 0;
+}
+.kingo-player .info .players .player .time span {
+	color: #fff;
+	padding-left: 2px;
+}
+.kingo-player .info .game dl {
+	clear: both;
+	padding: 5px 5px 10px 10px;
+}
+.kingo-player .info .game dt {
+	clear: left;
+	width: 70px;
+	float: left;
+	padding: 0 0 3px 0;
+}
+.kingo-player .info .game dd {
+	padding: 0 0 3px 0;
+	margin: 0 0 0 85px;
+}
+.kingo-player .info a {
+    color: #fff;
+}
+.kingo-player .nav-tree-container {
+    float: right;
+    width: 600px;
+	max-height: 100px;
+    height: auto;
+    padding: 0px 0 0px 0px;
+    margin: 5px 0 5px 0;
+    overflow: auto;
+    background: #fff;
+    display: none;
+    position: relative;
+}
+.kingo-player .nav-tree table {
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.kingo-player .nav-tree table td {
+    width: 24px;
+    height: 24px;
+    background: url(./images/navtree-line.gif);
+    padding: 0;
+}
+.kingo-player .nav-tree .empty, .kingo-player .nav-tree .elbow {
+    width: 19px;
+    height: 15px;
+    padding: 0 0 5px 5px;
+    background: #333;
+}
+.kingo-player .nav-tree .elbow {
+    background: #fff url(./images/navtree-elbow.gif) 5px -2px no-repeat;
+}
+.kingo-player .nav-tree .line {
+    width: 24px;
+    height: 24px;
+    background: #333 url(./images/navtree-left.gif) 5px 0 no-repeat;
+}
+.kingo-player .nav-tree a {
+    float: left;
+    margin: 0 0 5px 5px;
+    width: 19px;
+    height: 15px;
+    text-decoration: none;
+    font-size: 9px;
+    font-family: arial, helvetica, sans-serif;
+    text-align: center;
+    padding: 4px 0 0 0;
+    cursor: pointer;
+}
+.kingo-player .nav-tree a.w {
+    background: url(./images/w-nav.png);
+    color: #000;
+}
+.kingo-player .nav-tree a.b {
+    background: url(./images/b-nav.png);
+    color: #fff;
+}
+.kingo-player .nav-tree a.x {
+    background: #444;
+    color: #ccc;
+}
+.kingo-player .nav-tree a.current {
+    background: #822 !important;
+    color: #fff !important;
+}
+.kingo-player .continuations {
+    background: #aa9;
+    padding: 5px;
+}
+.kingo-player .continuation {
+   clear: left;
+   padding: 5px;
+   cursor: pointer;
+   height: 12px;
+}
+.kingo-player .continuation:hover {
+    background: #ccb;
+}
+.kingo-player .continuation div.cont-label {
+    width: 15px;
+    float: left;
+    clear: left;
+    font-weight: bold;
+    color: #443;
+}
+.kingo-player .continuation div.cont-bar {
+    float: left;
+    margin-top: 3px;
+    height: 7px;
+    background: #665;
+}
+.kingo-player .continuation div.cont-count {
+    width: 100px;
+    float: left;
+    margin: 0 0 0 5px;
+    font-size: 9px;
+    color: #554;
+}
+#cont-search {
+    display: block;
+    margin: 0 0 10px 0;
+}
+#cont-search:hover {
+    text-decoration: underline;
+}
+.kingo-player .preferences {
+	clear: right;
+	float: right;
+	width: 302px;
+	font-size: 11px;
+	margin: 15px 0 0 20px;
+	overflow: auto;
+    background: #222;
+    color: #888;
+    display: none;
+}
+.kingo-player .options {
+    width: 600px;
+    clear: right;
+    display: none;
+    float: right;
+}
+.kingo-player .options a {
+    float: left;
+    display: block;
+    width: 172px;
+    padding: 2px 0px 0px 0px;
+    margin: 5px 0 20px 5px;
+    background: #181818;
+    border: 1px solid #282828;
+    text-align: center;
+    color: #fff;
+}
+.kingo-player .option-save {
+    float: left;
+    display: block;
+    width: 390px;
+    padding: 10px 0;
+    margin: 5px 0 50px 5px;
+    background: #181818;
+    border: 1px solid #282828;
+    text-align: center;
+}
+.kingo-player .option-download {
+    display: none;
+}
+.kingo-loading {
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	top: 560px;
+	left: 380px;
+	padding: 0px 0 0 0px;
+	color: #777;
+	z-index: 9999;
+    background: url(./images/loading.gif) no-repeat;
+    text-indent: -9999px;
+}
+.kingo-error {
+	position: absolute;
+	top: 140px;
+	left: 0;
+	width: 381px;
+	font-size: 13px;
+	background: #933;
+	border-right: 2px solid #622;
+	border-bottom: 2px solid #622;
+	margin: 20px auto 20px auto;
+	padding: 20px;
+	color: #fff;
+	z-index: 9999;
+}
+.kingo-player .footer {
+    clear: both;
+}
+select {
+   font-size:10px;
+}
+option {
+	width:20px;
+}

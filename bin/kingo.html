@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>KinGo</title>
+    
+    <style type="text/css">
+    body {
+        margin: 0;
+    }
+    </style>
+
+    <script type="text/javascript" src="player/main.js"></script>
+    <!-- script for open sgf file using shell script trick! -->
+    <script type="text/javascript" src="player/external.sh"></script>
+</head>
+
+<body>
+    <!-- Toolbar Javascript -->
+    <div style="position:absolute; top:641px; right:135px; z-index:100; display:block;">
+        <select id="sgfFilesList" onchange="loadGame()"></select>
+</div>
+    <div id="toolbar" style="position:absolute; top:640px; right:15px; z-index:100; display:block;">
+        <a href="javascript:player.toggleComments()"><img src="player/images/toolbar/comments.png" alt="Comments"/></a>
+        <a href="javascript:player.toggleNavTree()"><img src="player/images/toolbar/navtree.png" alt="Navigation Tree"/></a>
+        <a href="javascript:player.toggleTools()"><img src="player/images/toolbar/tools.png" alt="Tools"/></a>
+        <a href="javascript:player.toggleInfo()"><img src="player/images/toolbar/info.png" alt="Information"/></a>
+    </div>
+    
+    <script>
+        var select = document.getElementById("sgfFilesList");
+        select.options[0] = new Option("Open");
+        for(index in sgfFiles) {
+            var str = sgfFiles[index].substr(4);
+            select.options[select.options.length] = new Option(str, sgfFiles[index]);
+        }
+    </script>
+
+    <div id="player-container"></div>
+
+    <script type="text/javascript">
+    var player = new kingo.Player({
+        container:       "player-container", // HTML element id indicating where to put the player
+        theme:           "standard", // "standard" or "compact"
+        sgfUrl:          "sgf/blood_vomit.sgf", // relative URL (within same domain) to SGF file to load
+        loadPath:        [0, 0], // The location within the game tree to start at
+        mode:            "play", // "play" or "view"
+        showComments:    true,
+        showPlayerInfo:  true,
+        showGameInfo:    true,
+        showTools:       true,
+        showOptions:     true,
+        showNavTree:     true,
+        markCurrent:     true,
+        markVariations:  true,
+        markNext:        false,
+        enableShortcuts: true,
+        problemMode:     false
+    });
+    </script>
+    
+    <script>
+    var player;
+    function loadGame() {
+        var select = document.getElementById("sgfFilesList");
+        if(select.options.length > 0 && select.selectedIndex != 0) {
+            player = new kingo.Player({
+                container:       "player-container", // HTML element id indicating where to put the player
+                theme:           "standard", // "standard" or "compact"
+                sgfUrl:          select.options[select.selectedIndex].value, // relative URL (within same domain) to SGF file to load
+                loadPath:        [0, 0], // The location within the game tree to start at
+                mode:            "play", // "play" or "view"
+                showComments:    true,
+                showPlayerInfo:  true,
+                showGameInfo:    true,
+                showTools:       false,
+                showOptions:     false,
+                showNavTree:     true,
+                markCurrent:     true,
+                markVariations:  true,
+                markNext:        false,
+                enableShortcuts: true,
+                problemMode:     false
+            });
+        }
+    }
+    </script>
+</body>
+
+</html>
